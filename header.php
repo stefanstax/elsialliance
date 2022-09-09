@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * The header.
+ *
+ * This is the template that displays all of the <head> section and everything up until main.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package WordPress
+ * @subpackage Twenty_Twenty_One
+ * @since Twenty Twenty-One 1.0
+ */
+
+?>
+<!doctype html>
+<html <?php language_attributes(); ?>>
+
+<head>
+  <meta charset="<?php bloginfo('charset'); ?>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/bc04e9d4fe.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --leaf-green: #425f4b;
+      --dark-green: #1a2e2e;
+      --sooth-green: #3a595c;
+      --washed-green: #7ba9a9;
+      --pale-green: #bcd9d7;
+      --white-green: #edeef0;
+      --navy-blue: #00004d;
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+  <?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+  <?php wp_body_open(); ?>
+  <div id="page" class="site">
+    <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'twentytwentyone'); ?></a>
+
+    <?php get_template_part('template-parts/header/main-navigation', "part"); ?>
+
+    <div id="content" class="gpb__container">
+      <div id="gpb__page" class="gpb__xlcontainer">
+        <main id="main" class="site-main" role="main">

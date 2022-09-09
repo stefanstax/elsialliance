@@ -1,0 +1,134 @@
+
+/* ! Section Title */
+div.title {
+  margin: 2rem 0px;
+}
+
+div.title a {
+  color: var(--sooth-green);
+}
+
+/* div.title a:hover {
+  color: var(--sooth-green) !important;
+  transition: all 0.5s ease-in-out;
+} */
+
+div.section__title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 15px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+div.section__title h2 {
+  margin-left: 1rem;
+  font-size: 25px;
+}
+
+.section__subtitle h4 {
+  margin: 0px;
+}
+
+div.section__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1rem 0px;
+}
+
+div.section__description h4 {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+div.section__description a {
+  text-decoration: none;
+  background-color: var(--washed-green);
+  padding: 20px;
+  width: 100%;
+  max-width: calc(100% - 40px);
+  margin-top: 1rem;
+  color: var(--white-green);
+  border-radius: 15px;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.section__description a:hover {
+  background-color: var(--sooth-green);
+  color: var(--white-green) !important;
+}
+
+div.title > a {
+  text-decoration: none;
+}
+
+div.section__title img,
+div.section__title svg {
+  width: 30px;
+  height: 30px;
+}
+
+div.section__title i {
+  font-size: 30px;
+}
+
+@media (min-width:768px) {
+  div.section__description a {
+    box-shadow: var(--box-shadow-stronger);
+    max-width: fit-content;
+    margin: 0px !important;
+  }
+
+  div.section__description {
+    flex-wrap: nowrap !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  div.section__description h4 {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1280px) {
+  div.section__title h2 {
+    font-size: 35px !important;
+  }
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 30px!important;
+  color: var(--dark-green);
+}
+
+
+.swiper-button-prev {
+  left: 0%;
+  top: 70%;
+  transform: translate(100%, -50%);
+}
+
+.swiper-button-next {
+  left: 120px;
+  top: 70%;
+  transform: translate(-100%, -50%);
+}
+
+/* @media (min-width: 600px) {
+  .swiper-button-next {
+    left: 12%;
+  }
+} */
+
+/* @media (min-width: 1024px) {
+  .swiper-button-next {
+    left: 8%;
+  }
+} */

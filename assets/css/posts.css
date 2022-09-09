@@ -1,0 +1,80 @@
+ p {
+    margin: .5rem 0px;
+  }
+  
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+    margin: 1rem 0px;
+}
+
+strong {
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.25em;
+}
+
+h3 {
+    font-size: 1.11em;
+}
+
+h4 {
+    font-size: 0.8em;
+}
+
+h5 {
+    font-size: 0.67em;
+}
+
+h6 {
+    font-size: 0.5em;
+}
+
+.wp-block-image img {
+    object-fit: cover!important;
+    object-position: center!important;
+}
+
+@media only screen and (min-width: 1024px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    h3 {
+        font-size: 1.17em;
+    }
+    
+    h4 {
+        font-size: 1em;
+    }
+    
+    h5 {
+        font-size: 0.83em;
+    }
+    
+    h6 {
+        font-size: 0.67em;
+    }
+}
+
+/* img {
+    width: 100%;
+} */
+
+.wp-block-media-text__media img, .wp-block-media-text__media video {
+    object-fit: cover!important;
+    object-position: center!important;
+}
