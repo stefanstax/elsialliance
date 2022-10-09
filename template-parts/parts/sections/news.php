@@ -18,7 +18,7 @@ $the_query = new WP_Query($args);
     <a href="<?php if (!empty($homePageGroup["link"])) {
                 echo $homePageGroup["link"];
               } else {
-                echo home_url("/what-we-do");
+                echo home_url("/news");
               } ?>">
       <div class="w-full title">
         <div class="section__title">
