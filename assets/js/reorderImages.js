@@ -3,7 +3,7 @@ let currentURL = document.location.href;
 (function reorderImages() {
   let images = document.querySelectorAll("figure");
 
-  images.forEach(image => {
+  images.forEach((image) => {
     if (!currentURL.includes("what-we-do")) {
       image.classList.add("custom");
       image.classList.add("full");
@@ -14,7 +14,7 @@ let currentURL = document.location.href;
 (function reorderParagraphs() {
   let images = document.querySelectorAll("p");
 
-  images.forEach(image => {
+  images.forEach((image) => {
     image.classList.add("my-2");
     image.classList.add("text-lg");
   });
@@ -23,7 +23,7 @@ let currentURL = document.location.href;
 (function reorderHeadings() {
   let images = document.querySelectorAll("h2");
 
-  images.forEach(image => {
+  images.forEach((image) => {
     image.classList.add("my-2");
     image.classList.add("text-2xl");
     image.classList.add("font-black");
@@ -35,7 +35,7 @@ let currentURL = document.location.href;
 (function reorderSubHeadings() {
   let images = document.querySelectorAll("h3");
 
-  images.forEach(image => {
+  images.forEach((image) => {
     image.classList.add("my-2");
     image.classList.add("text-xl");
     image.classList.add("font-bold");
@@ -46,7 +46,7 @@ let currentURL = document.location.href;
 (function reorderSecondaryHeadings() {
   let images = document.querySelectorAll("h4");
 
-  images.forEach(image => {
+  images.forEach((image) => {
     image.classList.add("my-2");
     image.classList.add("text-xl");
     image.classList.add("font-bold");
@@ -57,7 +57,7 @@ let currentURL = document.location.href;
 (function reorderSecondaryHeadings() {
   let images = document.querySelectorAll("i");
 
-  images.forEach(image => {
+  images.forEach((image) => {
     let parentElement = image.parentElement.toString();
     if (!parentElement.includes("http")) {
       image.classList.add("text-[#131616]");
@@ -68,10 +68,10 @@ let currentURL = document.location.href;
 (function centerImages() {
   let images = document.querySelectorAll("img");
 
-  images.forEach(image => {
+  images.forEach((image) => {
     // Get parent level
     let parentElementName = image.parentElement.classList;
-    if (!parentElementName.contains("w-full")) {
+    if (!parentElementName.contains("w-full") || !image.src.includes("logo")) {
       image.classList.add("drop-shadow-xl");
       image.style.boxShadow = "none";
     }
@@ -82,7 +82,7 @@ let currentURL = document.location.href;
 (function redesignCover() {
   let covers = document.querySelectorAll("div.wp-block-cover");
 
-  covers.forEach(cover => {
+  covers.forEach((cover) => {
     let spanChild = cover.children[0];
     let imageChild = cover.children[1];
     let contentChild = cover.children[2];
@@ -107,7 +107,7 @@ let currentURL = document.location.href;
 (function removePDFObject() {
   let pdfFiles = document.querySelectorAll(".wp-block-file");
 
-  pdfFiles.forEach(pdfFile => {
+  pdfFiles.forEach((pdfFile) => {
     let pdfFileObject = pdfFile.children[0];
 
     pdfFile.style.margin = "1rem 0px";
