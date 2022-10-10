@@ -71,11 +71,11 @@ let currentURL = document.location.href;
   images.forEach((image) => {
     // Get parent level
     let parentElementName = image.parentElement.classList;
-    if (!parentElementName.contains("w-full") || !image.src.includes("logo")) {
+    if (!parentElementName.contains("w-full")) {
       image.classList.add("drop-shadow-xl");
       image.style.boxShadow = "none";
+      image.classList.add("mx-auto");
     }
-    image.classList.add("mx-auto");
   });
 })();
 
