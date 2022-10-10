@@ -70,9 +70,9 @@ let currentURL = document.location.href;
 
   images.forEach((image) => {
     // Get parent level
-    let parentElementName = image.parentElement.classList;
     let parentElementType = image.parentElement.nodeName;
-    if (!parentElementName.contains("w-full") || parentElementType !== "A") {
+
+    if (parentElementType !== "A") {
       image.classList.add("drop-shadow-xl");
       image.style.boxShadow = "none";
       image.classList.add("mx-auto");
