@@ -37,7 +37,7 @@ function register_footer_scripts()
 {
     wp_enqueue_script('cookies', get_template_directory_uri() . '/assets/js/cookies.js');
 }
-add_action("wp_footer", "register_footer_scripts", 9999);
+add_action("wp_footer", "register_footer_scripts", 10);
 
 // ! Menu Support
 function register_menu_stax()
