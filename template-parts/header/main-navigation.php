@@ -2,8 +2,8 @@
 $custom_logo_id = get_theme_mod('custom_logo');
 $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 ?>
-<div class="staxy__header_navigation" id="mainNavigation">
-  <div class="staxy__header_content">
+<div class="gpb__header_navigation" id="mainNavigation">
+  <div class="gpb__header_content">
     <?php
     if (has_custom_logo()) { ?>
       <a href="<?php echo home_url(); ?>"><img src=" <?php echo $logo[0]; ?>" /></a>
@@ -18,14 +18,14 @@ $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
         <div></div>
       </div>
     </div>
-    <div class="staxy__navigation_items" id="menuToggler">
-      <div class="staxy__navigation_container">
+    <div class="gpb__navigation_items" id="menuToggler">
+      <div class="gpb__navigation_container">
         <div class=" menu__close" onClick="toggleMenu();">
           <p>Menu</p>
           <img src="https://res.cloudinary.com/dnqicdh71/image/upload/v1639729887/ELSiA/apo10f7tinxvgoziox1s.svg" />
         </div>
         <!-- WordPress menu -> header-menu -->
-        <div class="staxy__menu">
+        <div class="gpb__menu">
           <div class="menu__content">
 
             <?php
