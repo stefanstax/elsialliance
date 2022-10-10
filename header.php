@@ -7,6 +7,7 @@
   <!-- Start cookieyes banner -->
   <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/f39f64635719b6320c51378d/script.js"></script> <!-- End cookieyes banner -->
   <script src="https://kit.fontawesome.com/bc04e9d4fe.js" crossorigin="anonymous"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
 
   <style>
     :root {
@@ -34,6 +35,6 @@
 
     <?php get_template_part('template-parts/header/main-navigation', "part"); ?>
 
-    <div id="content" class="gpb__container">
-      <div id="gpb__page" class="gpb__xlcontainer">
+    <div id="content" class="staxy__container">
+      <div id="staxy__page" class="staxy__xlcontainer">
         <main id="main" class="site-main" role="main">
