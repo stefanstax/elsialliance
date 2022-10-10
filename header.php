@@ -35,6 +35,6 @@
 
     <?php get_template_part('template-parts/header/main-navigation', "part"); ?>
 
-    <div id="content" class="gpb__container">
-      <div id="gpb__page" class="gpb__xlcontainer">
+    <div id="content" class="staxy__container">
+      <div id="staxy__page" class="staxy__xlcontainer">
         <main id="main" class="site-main" role="main">
