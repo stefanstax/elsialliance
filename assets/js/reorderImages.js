@@ -75,6 +75,8 @@ let currentURL = document.location.href;
       image.classList.add("drop-shadow-xl");
       image.style.boxShadow = "none";
       image.classList.add("mx-auto");
+    } else {
+      image.classList.add("mx-0");
     }
   });
 })();
