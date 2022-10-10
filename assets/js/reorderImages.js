@@ -71,12 +71,11 @@ let currentURL = document.location.href;
   images.forEach((image) => {
     // Get parent level
     let parentElementName = image.parentElement.classList;
-    if (!parentElementName.contains("w-full")) {
+    let parentElementType = image.parentElement.nodeName;
+    if (!parentElementName.contains("w-full") || parentElementType !== "A") {
       image.classList.add("drop-shadow-xl");
       image.style.boxShadow = "none";
       image.classList.add("mx-auto");
-    } else {
-      image.classList.add("mx-0");
     }
   });
 })();
