@@ -63,29 +63,26 @@ function website_logo_stax()
 }
 add_action('after_setup_theme', 'website_logo_stax', 11);
 
+// ! Shortcodes
+// Shortcode to display clients in a grid
+function building_news_slider_shortcode()
+{
+    ob_start();
+    get_template_part('template-parts/parts/sections/news-slider', "part");
+    return ob_get_clean();
+}
 
+add_shortcode('news_slider', 'building_news_slider_shortcode');
 
-// ! Custom image sizes
-// add_action('after_setup_theme', 'staxio_custom_theme_setup');
+function building_news_grid_shortcode()
+{
+    ob_start();
+    get_template_part('template-parts/parts/sections/news-grid', "part");
+    return ob_get_clean();
+}
 
-// function staxio_custom_theme_setup()
-// {
-//     add_image_size('fixed-banner', 1024, 213, false);
-//     add_image_size('mobile-block', 300, 300, false);
-//     add_image_size('square-block', 800, 800, false);
-//     add_image_size("medium", 1280, 600, false);
-// }
+add_shortcode('news_grid', 'building_news_grid_shortcode');
 
-
-
-// // Register the three useful image sizes for use in Add Media modal
-// add_filter('image_size_names_choose', 'staxio_custom_image_sizes');
-// function staxio_custom_image_sizes($sizes)
-// {
-//     return array_merge($sizes, array(
-//         'fixed-banner' => __('Fixed Banner'),
-//     ));
-// }
 
 // ! SVG Support 
 function svg_file_type_stax($file_types)
@@ -110,58 +107,6 @@ if (function_exists('add_theme_support')) {
 
 // ! Shorten default the_excerpt length in WordPress
 
-
-// ! Members Post Type
-// Members Custom Post Type
-function members_init()
-{
-    // set up product labels
-    $labels = array(
-        'name' => 'Members',
-        'singular_name' => 'Member',
-        'add_new' => 'Add New Member',
-        'add_new_item' => 'Add New Member',
-        'edit_item' => 'Edit Member',
-        'new_item' => 'New Member',
-        'all_items' => 'All Members',
-        'view_item' => 'View Member',
-        'search_items' => 'Search Members',
-        'not_found' =>  'No Members Found',
-        'not_found_in_trash' => 'No Members found in Trash',
-        'parent_item_colon' => '',
-        'menu_name' => 'Members',
-    );
-
-    // register post type
-    $args = array(
-        'labels' => $labels,
-        'public' => true,
-        'has_archive' => true,
-        'show_ui' => true,
-        'capability_type' => 'post',
-        'hierarchical' => false,
-        'rewrite' => array('slug' => 'member'),
-        'query_var' => true,
-        'menu_icon' => 'dashicons-networking',
-        'supports' => array(
-            'title',
-            'editor',
-            'excerpt',
-            'trackbacks',
-            'custom-fields',
-            'comments',
-            'revisions',
-            'thumbnail',
-            'author',
-            'page-attributes'
-        )
-    );
-    register_post_type('member', $args);
-
-    // register taxonomy
-    register_taxonomy('member_category', 'member', array('hierarchical' => true, 'label' => 'Category', 'query_var' => true, 'rewrite' => array('slug' => 'member-category')));
-}
-add_action('init', 'members_init');
 
 
 // ! ACF Settings Page
