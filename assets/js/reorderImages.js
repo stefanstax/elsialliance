@@ -127,3 +127,12 @@ let currentURL = document.location.href;
     }
   });
 })();
+
+(function reorderWPColumns() {
+  let allColumns = document.querySelectorAll(".wp-block-columns");
+
+  allColumns.forEach((column) => {
+    console.log(column);
+    column.classList.add("gap-[10px]");
+  });
+})();
