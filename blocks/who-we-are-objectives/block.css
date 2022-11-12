@@ -1,18 +1,4 @@
-/* @media (min-width: 768px) {
-  .wp-block-columns {
-    flex-wrap: wrap !important;
-  }
-
-  .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
-    flex: 0 0 20%;
-  }
+.wp-block-columns {
+  flex-wrap: wrap!important;
+  margin: 1.5em 0!important;
 }
-
-@media (min-width: 1280px) {
-  .wp-block-columns {
-    align-items: stretch;
-  }
-  .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
-    flex: 0 0 20%;
-  }
-} */

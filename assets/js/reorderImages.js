@@ -1,4 +1,16 @@
 let currentURL = document.location.href;
+let windowResizedWidth = window.innerWidth;
+// * Window Resize catchers
+window.onload = function () {
+  ObjectivesColumnDisplay();
+};
+
+window.onresize = function () {
+  windowResizedWidth = window.innerWidth;
+  ObjectivesColumnDisplay();
+};
+
+// ! Turn functions into ES6
 
 (function reorderImages() {
   let images = document.querySelectorAll("figure");
@@ -134,3 +146,31 @@ let currentURL = document.location.href;
     column.classList.add("gap-[10px]");
   });
 })();
+
+const ObjectivesColumnDisplay = () => {
+  let wpColumns = document.querySelectorAll(".wp-block-columns");
+  wpColumns.forEach((objectiveColumn) => {
+    // * Tweak needed for [0]
+    let objectivesContainer =
+      objectiveColumn.children[0].children[0].classList.contains("bg-slate-50");
+    let columnChildren = objectiveColumn?.children;
+
+    if (objectivesContainer) {
+      for (let index = 0; index < columnChildren.length; index++) {
+        const element = columnChildren[index];
+        element.classList.add("flex");
+        if (windowResizedWidth < 768) {
+          element.classList.add("min-w-full");
+        } else {
+          element.classList.remove("min-w-full");
+        }
+      }
+
+      for (let index = 0; index < columnChildren.length; index++) {
+        const element = columnChildren[index].children;
+        // ! Grab the first child - working if guidelines are followed
+        element[0].classList.add("w-full");
+      }
+    }
+  });
+};
