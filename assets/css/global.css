@@ -74,6 +74,32 @@ img.page__intro_image {
 
 /* ! For pages @pages | end */
 
+/* ! For Swiper | start */
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 30px!important;
+  color: var(--dark-green);
+}
+
+
+.swiper-button-prev {
+  left: 0%;
+  top: 70%;
+  transform: translate(100%, -50%);
+}
+
+.swiper-button-next {
+  left: 120px;
+  top: 70%;
+  transform: translate(-100%, -50%);
+}
+/* ! For Swiper | end */
+
+/* ! For Container | start */
+.container {
+  max-width: 1024px!important;
+}
+/* ! For Container | end */
+
 /* Section images */
 .banner img {
   width: 100%;

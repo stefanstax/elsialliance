@@ -4,11 +4,10 @@ get_header();
 
 // Content blocks
 get_template_part("template-parts/parts/introBanner/introBanner", "part"); ?>
-<div class="my-28">
+<div class="container px-4 mx-auto my-28">
     <?php
-    get_template_part("template-parts/parts/sections/who-we-are", "part");
-    get_template_part("template-parts/parts/sections/what-we-do", "part");
-    get_template_part("template-parts/parts/sections/news", "part"); ?>
+    the_content();
+    ?>
 </div>
 <?php
 // Footer

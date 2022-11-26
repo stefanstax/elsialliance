@@ -27,8 +27,6 @@ let currentURL = document.location.href;
     image.classList.add("my-2");
     image.classList.add("text-2xl");
     image.classList.add("font-black");
-    image.classList.add("text-[#131616]");
-    image.classList.add("text-[#131616]");
   });
 })();
 
@@ -39,7 +37,6 @@ let currentURL = document.location.href;
     image.classList.add("my-2");
     image.classList.add("text-xl");
     image.classList.add("font-bold");
-    image.classList.add("text-[#131616]");
   });
 })();
 
@@ -50,20 +47,19 @@ let currentURL = document.location.href;
     image.classList.add("my-2");
     image.classList.add("text-xl");
     image.classList.add("font-bold");
-    image.classList.add("text-[#131616]");
   });
 })();
 
-(function reorderSecondaryHeadings() {
-  let images = document.querySelectorAll("i");
+// (function reorderSecondaryHeadings() {
+//   let images = document.querySelectorAll("i");
 
-  images.forEach((image) => {
-    let parentElement = image.parentElement.toString();
-    if (!parentElement.includes("http")) {
-      image.classList.add("text-[#131616]");
-    }
-  });
-})();
+//   images.forEach((image) => {
+//     let parentElement = image.parentElement.toString();
+//     if (!parentElement.includes("http")) {
+//       image.classList.add("text-[#131616]");
+//     }
+//   });
+// })();
 
 (function centerImages() {
   let images = document.querySelectorAll("img");
@@ -72,7 +68,10 @@ let currentURL = document.location.href;
     // Get parent level
     let parentElementType = image.parentElement.nodeName;
 
-    if (parentElementType !== "A") {
+    if (
+      parentElementType !== "A" &&
+      !image.classList.contains("exclude__global")
+    ) {
       image.classList.add("drop-shadow-xl");
       image.style.boxShadow = "none";
       image.classList.add("mx-auto");
@@ -125,5 +124,13 @@ let currentURL = document.location.href;
       pdfFileName.innerHTML += " ( Click to view in the browser )";
       pdfFileName.style.marginRight = "10px";
     }
+  });
+})();
+
+(function reorderWPColumns() {
+  let allColumns = document.querySelectorAll(".wp-block-columns");
+
+  allColumns.forEach((column) => {
+    column.classList.add("gap-[10px]");
   });
 })();

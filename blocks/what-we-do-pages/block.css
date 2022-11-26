@@ -1,0 +1,11 @@
+/* @media (max-width: 767px) {
+  .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
+    flex: 0 0 48%;
+  }
+}
+
+@media (min-width: 768px) {
+  .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
+    flex: 0 0 20%;
+  }
+} */
