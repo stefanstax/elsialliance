@@ -58,7 +58,7 @@ $site_description = get_bloginfo('description');
           </ul>
         </nav>
       <?php endif; ?>
-      <a href="mailto:elsia@staxy.io?Subject=Inqurity regarding ELSIA Website" class="mt-4 bg-[#7ba9a9] p-4 rounded-md shadow-2xl" target=" _blank" rel="sponsored">
+      <a href="mailto:contact@staxy.io?Subject=Inqurity regarding ELSIA Website" class="mt-4 bg-[#7ba9a9] p-4 rounded-md shadow-2xl" target=" _blank" rel="sponsored">
         <span>Contact Developer</span>
         <img class="w-0" src="https://cdn.staxtalks.com/files/assets/2022/08/03182513/staxtalks-logo.png" alt="Stefan Stax Business Logo - Black colored outline logo - Illustrated logo representing an S" title="Stefan Stax - Helping Small businesses thrive with technological improvements" /></a>
     </div>
